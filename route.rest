@@ -1,0 +1,59 @@
+GET http://localhost:3000/subscribers
+
+###
+
+GET http://localhost:3000/subscribers/6021a740a3d978185bac8bef
+
+###
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+  "name": "Cox",
+  "subscribedToChannel": "Trap Nation"
+}
+
+###
+
+DELETE http://localhost:3000/subscribers/6021a740a3d978185bac8bef
+
+###
+
+PATCH http://localhost:3000/subscribers/6021acbf76caac1b9840e0ef
+Content-Type: application/json
+
+{
+  "name": "Loggers",
+  "subscribedToChannel": "Poggers"
+}
+
+###
+
+GET http://localhost:3000/channels
+
+### 
+
+POST http://localhost:3000/channels
+Content-Type: application/json
+
+{
+  "channelName": "Trap Nation",
+  "email": "trapnation@gmail.com",
+  "subscribers": ["nick", "sam", "eric"]
+}
+
+###
+
+PATCH http://localhost:3000/channels/60227fe52553381205292269
+Content-Type: application/json
+
+{
+  "channelName": "Trap",
+  "email": "traptown@gmail.com",
+  "subscribers": ["nick"]
+}
+
+###
+
+DELETE http://localhost:3000/channels/60227fe52553381205292269
